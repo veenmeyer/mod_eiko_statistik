@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="2.5"
+	client="site"
+	method="upgrade">
+	<name>mod_eiko_statistik</name>
+	<creationDate>Juli 2014</creationDate>
+	<author>Ralf Meyer</author>
+	<copyright>Released under GNU/GPL License</copyright>
+	<authorEmail>webmaster@feuerwehr-veenhusen.de</authorEmail>
+	<authorUrl>www.einsatzkomponente.de</authorUrl>
+	<version>1.02</version>
+	<description><![CDATA[<div style="border:1px solid #000; padding-left:5px;"><span style=" font-size: 18px; color:#F00;"><b>mod_eiko_statistik für J3.x</b></span><br/><br/><span style="font-size:10px;"></span>Das Modul dient zur Anzeige einer Statistik für die Einsatzberichte aus der Einsatzkomponente für J3<br/><br/>Für weitere Informationen besuchen Sie bitte unser Supportforum <a href="http://www.einsatzkomponente.de" target="_blank">einsatzkomponente.de</a> </div>
+	]]></description>	
+<files>
+	<filename module="mod_eiko_statistik">mod_eiko_statistik.php</filename>
+	<filename>index.html</filename>
+    <filename>tmpl/default.php</filename>
+    <filename>tmpl/index.html</filename>
+</files>
+
+
+<config>
+		<fields name="params">
+			<fieldset name="basic">
+
+	<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="A suffix to be applied to the css class of the module (table.moduletable), this allows individual module styling" />
+	<field name="spacer1"	type="spacer" hr="true"	/>
+    <field name="zeige" type="text" default="1" label="Zeige Statistik der letzten X Jahre: " description="" />
+	<field name="spacer2"	type="spacer" hr="true"	/>
+	<field name="width" type="text" default="600px" label="Modulbreite (z.B. 600px):" description="Modulbreite in Pixel" />
+	<field name="height" type="text" default="350px" label="Modulhöhe (z.B. 350px):" description="Modulhöhe in Pixel" />
+	<field name="spacer3"	type="spacer" hr="true"	/>
+	<field name="titel" type="text" default="Einsatzstatistik" label="Titel : " description="" />
+	<field name="titelsize" type="text" default="16" label="Textgröße des Titels (z.B. 16): " description="" />
+	<field name="titeltextcolor" type="color" default="#000000" label="Titeltextfarbe: " description="" />
+	<field name="spacer4"	type="spacer" hr="true"	/>
+	<field name="legend" type="radio" default="right" label="Position der Legende ?" description="">
+		<option value="right">Rechts</option>	
+		<option value="top">Oben</option>
+		<option value="bottom">Unten</option>
+		</field>
+	<field name="legendsize" type="text" default="10" label="Textgröße der Legende (z.B. 10): " description="" />
+	<field name="legendtextcolor" type="color" default="#000000" label="Legendentextfarbe: " description="" />
+	<field name="spacer5"	type="spacer" hr="true"	/>
+	<field name="background" type="color" default="#ffffff" label="Hintergrundfarbe: " description="" />
+	<field name="transparent" type="radio" default="true" label="Hintergrundfarbe transparent ?" description="Es wird dann keine Hintergrundfarbe angezeigt">
+		<option value="true">Ja </option>	
+		<option value="false">Nein</option>
+		</field>
+	<field name="spacer7"	type="spacer" hr="true"	/>
+	<field name="border" type="radio" default="1" label="Border (Rand) anzeigen ?" description="">
+		<option value="1">Ja </option>	
+		<option value="0">Nein</option>
+		</field>
+	<field name="spacer8"	type="spacer" hr="true"	/>
+	<field name="stapeln" type="radio" default="true" label="Werte stapeln ?" description="Balken nebeneinander, oder gestapelt ?">
+		<option value="true">Ja </option>	
+		<option value="false">Nein</option>
+		</field>
+	<field name="spacer9"	type="spacer" hr="true"	/>
+
+</fieldset>
+		</fields>
+	</config>
+</extension>
+
