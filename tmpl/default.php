@@ -13,7 +13,7 @@ defined('_JEXEC') or die;
 
 		$database			= JFactory::getDBO();
 		$query = 'SELECT COUNT(r.data1) as total,r.data1,rd.marker FROM #__eiko_einsatzberichte r ';
-		$query.='JOIN #__eiko_einsatzarten rd ON r.data1 = rd.title WHERE r.date1 LIKE "2%" AND r.state = "1" AND rd.state = "1"';
+		$query.='JOIN #__eiko_einsatzarten rd ON r.data1 = rd.title WHERE r.date1 LIKE "2%" AND (r.state = "1" OR r.state ="2") AND rd.state = "1"';
 	          $query.=' GROUP BY r.data1 ' ;
 		$database->setQuery( $query );
 		$total = $database->loadObjectList();
@@ -50,7 +50,7 @@ for($i=0; $i < count($total); $i++)
    {
 		$database			= JFactory::getDBO();
 		$query = 'SELECT COUNT(*) AS total FROM #__eiko_einsatzberichte r ';
-		$query.=' WHERE r.date1 LIKE "'.$totalyears[$n]->title.'%" AND r.data1 = "'.$total[$i]->data1.'" AND r.state = "1"';
+		$query.=' WHERE r.date1 LIKE "'.$totalyears[$n]->title.'%" AND r.data1 = "'.$total[$i]->data1.'" AND (r.state = "1" OR r.state="2")';
 	          $query.='' ;
 		$database->setQuery( $query );
 		$rows = $database->loadObjectList();	
@@ -109,13 +109,6 @@ echo '</script>';
 
 //<!--Div that will hold the pie chart-->
 echo '<div class="'.$moduleclass_sfx.'" style=" border:'.$border.'px solid #000;width:'.$width.'; height:'.$height.';" align="center" id="chart_div_'.$zufall.'"></div> '; 
-
-
-
-
-
-
-
 
 
 

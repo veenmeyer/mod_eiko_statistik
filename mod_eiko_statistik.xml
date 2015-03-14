@@ -5,7 +5,7 @@
 	client="site"
 	method="upgrade">
 	<name>mod_eiko_statistik</name>
-	<creationDate>Juli 2014</creationDate>
+	<creationDate>März 2015</creationDate>
 	<author>Ralf Meyer</author>
 	<copyright>Released under GNU/GPL License</copyright>
 	<authorEmail>webmaster@feuerwehr-veenhusen.de</authorEmail>
