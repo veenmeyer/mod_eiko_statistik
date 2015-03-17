@@ -12,8 +12,8 @@ defined('_JEXEC') or die;
 
 
 		$database			= JFactory::getDBO();
-		$query = 'SELECT COUNT(r.data1) as total,r.data1,rd.marker FROM #__eiko_einsatzberichte r ';
-		$query.='JOIN #__eiko_einsatzarten rd ON r.data1 = rd.title WHERE r.date1 LIKE "2%" AND (r.state = "1" OR r.state ="2") AND rd.state = "1"';
+		$query = 'SELECT COUNT(r.data1) as total,r.data1,rd.marker,rd.title as einsatzart FROM #__eiko_einsatzberichte r ';
+		$query.='JOIN #__eiko_einsatzarten rd ON r.data1 = rd.id WHERE r.date1 LIKE "2%" AND (r.state = "1" OR r.state ="2") AND rd.state = "1"';
 	          $query.=' GROUP BY r.data1 ' ;
 		$database->setQuery( $query );
 		$total = $database->loadObjectList();
@@ -31,7 +31,7 @@ $Column = '';
 $Colors = '';
 for($i=0; $i < count($total); $i++)
    {
-   $Column.='data.addColumn("number", "'.$total[$i]->data1.'");';
+   $Column.='data.addColumn("number", "'.$total[$i]->einsatzart.'");';
    $Colors.='"'.$total[$i]->marker.'",';
    }
    $Colors=substr($Colors,0,strlen($Colors)-1);

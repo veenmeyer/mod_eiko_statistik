@@ -5,12 +5,12 @@
 	client="site"
 	method="upgrade">
 	<name>mod_eiko_statistik</name>
-	<creationDate>März 2015</creationDate>
+	<creationDate>17.03.15</creationDate>
 	<author>Ralf Meyer</author>
 	<copyright>Released under GNU/GPL License</copyright>
 	<authorEmail>webmaster@feuerwehr-veenhusen.de</authorEmail>
 	<authorUrl>www.einsatzkomponente.de</authorUrl>
-	<version>1.02</version>
+	<version>1.03</version>
 	<description><![CDATA[<div style="border:1px solid #000; padding-left:5px;"><span style=" font-size: 18px; color:#F00;"><b>mod_eiko_statistik für J3.x</b></span><br/><br/><span style="font-size:10px;"></span>Das Modul dient zur Anzeige einer Statistik für die Einsatzberichte aus der Einsatzkomponente für J3<br/><br/>Für weitere Informationen besuchen Sie bitte unser Supportforum <a href="http://www.einsatzkomponente.de" target="_blank">einsatzkomponente.de</a> </div>
 	]]></description>	
 <files>
