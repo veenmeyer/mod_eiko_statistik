@@ -5,13 +5,13 @@
 	client="site"
 	method="upgrade">
 	<name>mod_eiko_statistik</name>
-	<creationDate>19.11.15</creationDate>
+	<creationDate>2016-12-28</creationDate>
 	<author>Ralf Meyer</author>
 	<copyright>Released under GNU/GPL License</copyright>
 	<authorEmail>webmaster@feuerwehr-veenhusen.de</authorEmail>
 	<authorUrl>www.einsatzkomponente.de</authorUrl>
-	<version>1.04</version>
-	<description><![CDATA[<div style="border:1px solid #000; padding-left:5px;"><span style=" font-size: 18px; color:#F00;"><b>mod_eiko_statistik für J3.x</b></span><br/><br/><span style="font-size:10px;"></span>Das Modul dient zur Anzeige einer Statistik für die Einsatzberichte aus der Einsatzkomponente für J3<br/><br/>Für weitere Informationen besuchen Sie bitte unser Supportforum <a href="http://www.einsatzkomponente.de" target="_blank">einsatzkomponente.de</a> </div>
+	<version>1.05</version>
+	<description><![CDATA[<div style="border:1px solid #000; padding-left:5px;"><span style=" font-size: 18px; color:#F00;"><b>mod_eiko_statistik für J3.x</b></span><br/><br/><span style="font-size:10px;"></span>Das Modul dient zur Anzeige einer Statistik für die Einsatzberichte aus der Einsatzkomponente für J3<br/><br/>Für weitere Informationen besuchen Sie bitte unser Supportforum <a href="https://www.einsatzkomponente.de" target="_blank">einsatzkomponente.de</a> </div>
 	]]></description>	
 <files>
 	<filename module="mod_eiko_statistik">mod_eiko_statistik.php</filename>
@@ -67,7 +67,7 @@
 <!-- UPDATESERVER DEFINITION -->
 	<updateservers>
 		<!-- Note: No spaces or linebreaks allowed between the server tags -->
-		<server type="extension" priority="1" name="mod_eiko_statistik">http://www.feuerwehr-veenhusen.de/update/com_einsatzkomponente-update.xml</server>
+		<server type="extension" priority="1" name="mod_eiko_statistik">http://www.feuerwehr-veenhusen.de/update/mod_eiko_statistik-update.xml</server>
 	</updateservers>
 
 </extension>
