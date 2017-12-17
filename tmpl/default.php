@@ -15,6 +15,7 @@ defined('_JEXEC') or die;
 		$query = 'SELECT COUNT(r.data1) as total,r.data1,rd.marker,rd.title as einsatzart FROM #__eiko_einsatzberichte r ';
 		$query.='JOIN #__eiko_einsatzarten rd ON r.data1 = rd.id WHERE r.date1 LIKE "2%" AND (r.state = "1" OR r.state ="2") AND rd.state = "1"';
 	          $query.=' GROUP BY r.data1 ' ;
+	          $query.=' ORDER BY rd.ordering DESC ' ;
 		$database->setQuery( $query );
 		$total = $database->loadObjectList();
 	
