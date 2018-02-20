@@ -29,8 +29,8 @@
 	<field name="spacer1"	type="spacer" hr="true"	/>
     <field name="zeige" type="text" default="1" label="Zeige Statistik der letzten X Jahre: " description="" />
 	<field name="spacer2"	type="spacer" hr="true"	/>
-	<field name="width" type="text" default="600px" label="Modulbreite (z.B. 600px):" description="Modulbreite in Pixel" />
-	<field name="height" type="text" default="350px" label="Modulhöhe (z.B. 350px):" description="Modulhöhe in Pixel" />
+	<!--<field name="width" type="text" default="600px" label="Modulbreite (z.B. 600px):" description="Modulbreite in Pixel" /> -->
+	<field name="min-height" type="text" default="350px" label="Modulhöhe (z.B. 350px):" description="Modulhöhe in Pixel" />
 	<field name="spacer3"	type="spacer" hr="true"	/>
 	<field name="titel" type="text" default="Einsatzstatistik" label="Titel : " description="" />
 	<field name="titelsize" type="text" default="16" label="Textgröße des Titels (z.B. 16): " description="" />
