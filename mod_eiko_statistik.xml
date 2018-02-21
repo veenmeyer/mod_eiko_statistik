@@ -30,7 +30,7 @@
     <field name="zeige" type="text" default="1" label="Zeige Statistik der letzten X Jahre: " description="" />
 	<field name="spacer2"	type="spacer" hr="true"	/>
 	<!--<field name="width" type="text" default="600px" label="Modulbreite (z.B. 600px):" description="Modulbreite in Pixel" /> -->
-	<field name="min-height" type="text" default="350px" label="Modulhöhe (z.B. 350px):" description="Modulhöhe in Pixel" />
+	<field name="min-height" type="text" default="350" label="Modulhöhe (z.B. 350 ):" description="Modulhöhe in Pixel" />
 	<field name="spacer3"	type="spacer" hr="true"	/>
 	
 	<field
