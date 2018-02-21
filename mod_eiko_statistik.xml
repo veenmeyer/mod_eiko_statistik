@@ -32,10 +32,25 @@
 	<!--<field name="width" type="text" default="600px" label="Modulbreite (z.B. 600px):" description="Modulbreite in Pixel" /> -->
 	<field name="min-height" type="text" default="350px" label="Modulhöhe (z.B. 350px):" description="Modulhöhe in Pixel" />
 	<field name="spacer3"	type="spacer" hr="true"	/>
-	<field name="titel" type="text" default="Einsatzstatistik" label="Titel : " description="" />
-	<field name="titelsize" type="text" default="16" label="Textgröße des Titels (z.B. 16): " description="" />
-	<field name="titeltextcolor" type="color" default="#000000" label="Titeltextfarbe: " description="" />
-	<field name="spacer4"	type="spacer" hr="true"	/>
+	
+	<field
+				name="show_titel"
+				type="radio"
+				class="btn-group"
+				default="1"
+				label="Titel anzeigen"
+				description="">
+					<option
+						value="0">JNO</option>
+					<option
+						value="1">JYES</option>
+	</field>
+	
+	<field name="titel" type="text" default="Einsatzstatistik" label="Titel : " description="" 	showon="show_titel:1"
+ />
+	<field name="titelsize" type="text" default="16" label="Textgröße des Titels (z.B. 16): " description=""  showon="show_titel:1"/>
+	<field name="titeltextcolor" type="color" default="#000000" label="Titeltextfarbe: " description="" showon="show_titel:1" />
+	<field name="spacer4"	type="spacer" hr="true" 	/>
 	<field name="legend" type="radio" default="right" label="Position der Legende ?" description="">
 		<option value="right">Rechts</option>	
 		<option value="top">Oben</option>

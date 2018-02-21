@@ -91,6 +91,8 @@ if ($transparent == 'true') :
 $background = 'transparent';
 endif;
 
+if (!$show_titel) :$titel = '';endif;
+
 echo "var options = {  
                      isStacked: ".$stapeln.",
                      backgroundColor: '".$background."',
