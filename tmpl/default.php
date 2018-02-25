@@ -91,10 +91,12 @@ if ($transparent == 'true') :
 $background = 'transparent';
 endif;
 
+if (!$show_titel) :$titel = '';endif;
+
 echo "var options = {  
                      isStacked: ".$stapeln.",
                      backgroundColor: '".$background."',
-                     width: ".$width.", 
+                     width: '100%', 
 					 height: ".$height.",  
 					 colors:[".$Colors."], 
 					 legend: {position: '".$legend."', textStyle: {color: '".$legendtextcolor."', fontSize: '".$legendsize."'}},
@@ -105,11 +107,12 @@ echo "var options = {
 					     };"; 
 // Instantiate and draw our chart, passing in some options.
 echo 'var chart = new google.visualization.ColumnChart(document.getElementById("chart_div_'.$zufall.'")); ';       
-echo 'chart.draw(data, options);      } ';   
+echo 'chart.draw(data, options);      } ';  
+echo '$(window).resize(function(){drawChart();});'; 
 echo '</script>';   
 
 //<!--Div that will hold the pie chart-->
-echo '<div class="'.$moduleclass_sfx.'" style=" border:'.$border.'px solid #000;width:'.$width.'; height:'.$height.';" align="center" id="chart_div_'.$zufall.'"></div> '; 
+echo '<div class="'.$moduleclass_sfx.'" style=" border:'.$border.'px solid #000;width:100%; min-height:'.$height.';" align="center" id="chart_div_'.$zufall.'"></div> '; 
 
 
 

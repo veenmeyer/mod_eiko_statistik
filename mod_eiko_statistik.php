@@ -14,13 +14,14 @@ defined('_JEXEC') or die;
 $moduleclass_sfx = $params->get('moduleclass_sfx', '');
 
 $width            = intval( $params->get( 'width', 0 ) );
-$height           = intval( $params->get( 'height', 0 ) );
+$height           = $params->get( 'min-height', 0 ) ;
 $background       = $params->get( 'background', '#ffffff' );
 
 
 $stapeln       = $params->get( 'stapeln', 'true' );
 $transparent       = $params->get( 'transparent', 'true' );
 $titel       =  $params->get( 'titel', 'Einsatzstatistik' );
+$show_titel       =  $params->get( 'show_titel', '1' );
 $legend       =  $params->get( 'legend', 'right' );
 $legendsize       =  $params->get( 'legendsize', '10' );
 $titelsize       =  $params->get( 'titelsize', '16' );
