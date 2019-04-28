@@ -29,5 +29,6 @@ $titeltextcolor       =  $params->get( 'titeltextcolor', '#000000' );
 $legendtextcolor       =  $params->get( 'legendtextcolor', '#000000' );
 $zeige       =  $params->get( 'zeige', '2' );
 $border       =  $params->get( 'border', '1' );
+$ex_einsatzart       =  $params->get( 'ex_einsatzart', '' );
 require( JModuleHelper::getLayoutPath('mod_eiko_statistik') );
 ?>
