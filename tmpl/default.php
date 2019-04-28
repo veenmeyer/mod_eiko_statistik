@@ -13,7 +13,7 @@ defined('_JEXEC') or die;
 
 		$database			= JFactory::getDBO();
 		$query = 'SELECT COUNT(r.data1) as total,r.data1,rd.marker,rd.title as einsatzart FROM #__eiko_einsatzberichte r ';
-		$query.='JOIN #__eiko_einsatzarten rd ON r.data1 = rd.id WHERE r.date1 LIKE "2%" AND (r.state = "1" OR r.state ="2") AND rd.state = "1"';
+		$query.='JOIN #__eiko_einsatzarten rd ON r.data1 = rd.id WHERE r.date1 LIKE "2%" AND (r.state = "1" OR r.state ="2") AND rd.state = "1" and r.data1 !="'.$ex_einsatzart.'"';
 	          $query.=' GROUP BY r.data1 ' ;
 	          $query.=' ORDER BY rd.ordering DESC ' ;
 		$database->setQuery( $query );
@@ -51,7 +51,7 @@ for($i=0; $i < count($total); $i++)
    {
 		$database			= JFactory::getDBO();
 		$query = 'SELECT COUNT(*) AS total FROM #__eiko_einsatzberichte r ';
-		$query.=' WHERE r.date1 LIKE "'.$totalyears[$n]->title.'%" AND r.data1 = "'.$total[$i]->data1.'" AND (r.state = "1" OR r.state="2")';
+		$query.=' WHERE r.date1 LIKE "'.$totalyears[$n]->title.'%" AND r.data1 = "'.$total[$i]->data1.'" AND (r.state = "1" OR r.state="2")  and r.data1 !="'.$ex_einsatzart.'"';
 	          $query.='' ;
 		$database->setQuery( $query );
 		$rows = $database->loadObjectList();	

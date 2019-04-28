@@ -5,12 +5,12 @@
 	client="site"
 	method="upgrade">
 	<name>mod_eiko_statistik</name>
-	<creationDate>2018-02-25</creationDate>
+	<creationDate>2019-04-28</creationDate>
 	<author>Ralf Meyer</author>
 	<copyright>Released under GNU/GPL License</copyright>
 	<authorEmail>webmaster@feuerwehr-veenhusen.de</authorEmail>
 	<authorUrl>www.einsatzkomponente.de</authorUrl>
-	<version>1.07.0</version>
+	<version>1.08.0</version>
 	<description><![CDATA[<div style="border:1px solid #000; padding-left:5px;"><span style="color:#F00;"><h1>mod_eiko_statistik für J3.x</h1></span><br/><br/><span style="font-size:10px;"></span>Das Modul dient zur Anzeige einer Statistik für die Einsatzberichte aus der Einsatzkomponente für J3<br/><br/>Für weitere Informationen besuchen Sie bitte unser Supportforum <a href="https://www.einsatzkomponente.de" target="_blank">einsatzkomponente.de</a> </div>
 	]]></description>	
 <files>
@@ -28,6 +28,8 @@
 	<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="A suffix to be applied to the css class of the module (table.moduletable), this allows individual module styling" />
 	<field name="spacer1"	type="spacer" hr="true"	/>
     <field name="zeige" type="text" default="1" label="Zeige Statistik der letzten X Jahre: " description="" />
+	<field name="spacer254"	type="spacer" hr="true"	/>
+    <field name="ex_einsatzart" type="text" default="" label="Einsatzart von der Statistik ausschließen (Id-Nr.): " description="" />
 	<field name="spacer2"	type="spacer" hr="true"	/>
 	<!--<field name="width" type="text" default="600px" label="Modulbreite (z.B. 600px):" description="Modulbreite in Pixel" /> -->
 	<field name="min-height" type="text" default="350" label="Modulhöhe (z.B. 350 ):" description="Modulhöhe in Pixel" />
@@ -82,7 +84,7 @@
 <!-- UPDATESERVER DEFINITION -->
 	<updateservers>
 		<!-- Note: No spaces or linebreaks allowed between the server tags -->
-		<server type="extension" priority="1" name="mod_eiko_statistik">https://www.feuerwehr-veenhusen.de/update/mod_eiko_statistik-update.xml</server>
+		<server type="extension" priority="1" name="mod_eiko_statistik">https://einsatzkomponente.joomla100.com/update/mod_eiko_statistik-update.xml</server>
 	</updateservers>
 
 </extension>
