@@ -73,7 +73,13 @@ echo '<br/>';
 echo '<script type="text/javascript" src="https://www.google.com/jsapi"></script>';
 echo '<script type="text/javascript">';
 // Load the Visualization API and the piechart package.
-echo 'google.load("visualization", "1", {packages:["corechart"]});';    
+
+
+// Fix Problem Mootools<1,6 - Google Api 
+//echo 'google.load("visualization", "1", {packages:["corechart"]});';  
+echo 'google.charts.load("49", {packages: ["corechart"]});';    
+  
+  
 // Set a callback to run when the Google Visualization API is loaded.
 echo 'google.setOnLoadCallback(drawChart);';
 // Callback that creates and populates a data table, 
